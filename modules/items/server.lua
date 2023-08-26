@@ -539,5 +539,3 @@ Item('giftbox', function(event, item, inventory, data, slot)
 end)
 
 return Items
-
-return Items
