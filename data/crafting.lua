@@ -1,14 +1,27 @@
 return {
 	{
 		items = {
-			{
-				name = 'lockpick',
+			--[[{
+				name = 'default',
 				ingredients = {
-					scrapmetal = 5,
-					WEAPON_HAMMER = 0.05
+					rubber = 5,
+					steel = 5,
+					plastic = 5,
+					iron = 5,
+					glass = 5
 				},
 				duration = 5000,
-				count = 2,
+				count = 1,
+			},--]]
+			{
+				name = 'rims',
+				ingredients = {
+					steel = 15,
+					plastic = 5,
+					rubber = 15
+				},
+				duration = 5000,
+				count = 1,
 			},
 		},
 		points = {
@@ -29,6 +42,8 @@ return {
 				rotation = 70.0,
 			},
 		},
-		blip = { id = 566, colour = 31, scale = 0.8 },
+		groups = {
+			["mechanic"] = 0,
+		},
 	},
 }
