@@ -83,17 +83,6 @@ Item('bandage', function(data, slot)
 	end)
 end)
 
-Item('armour', function(data, slot)
-	if GetPedArmour(cache.ped) < 100 then
-		ox_inventory:useItem(data, function(data)
-			if data then
-				SetPlayerMaxArmour(PlayerData.id, 100)
-				SetPedArmour(cache.ped, 100)
-			end
-		end)
-	end
-end)
-
 client.parachute = false
 Item('parachute', function(data, slot)
 	if not client.parachute then
@@ -113,15 +102,39 @@ Item('parachute', function(data, slot)
 	end
 end)
 
-Item('phone', function(data, slot)
-	local success, result = pcall(function()
-		return exports.npwd:isPhoneVisible()
-	end)
-
-	if success then
-		exports.npwd:setPhoneVisible(not result)
-	end
+Item('lightarmour', function(data, slot)
+    if GetPedArmour(cache.ped) <= 25 then
+        ox_inventory:useItem(data, function(data)
+            if data then
+                SetPlayerMaxArmour(PlayerData.id, 25)
+                SetPedArmour(cache.ped, 25)
+            end
+        end)
+    end
 end)
+
+Item('armour', function(data, slot)
+    if GetPedArmour(cache.ped) <= 50 then
+        ox_inventory:useItem(data, function(data)
+            if data then
+                SetPlayerMaxArmour(PlayerData.id, 50)
+                SetPedArmour(cache.ped, 50)
+            end
+        end)
+    end
+end)
+
+Item('heavyarmour', function(data, slot)
+    if GetPedArmour(cache.ped) <= 75 then
+        ox_inventory:useItem(data, function(data)
+            if data then
+                SetPlayerMaxArmour(PlayerData.id, 75)
+                SetPedArmour(cache.ped, 75)
+            end
+        end)
+    end
+end)
+
 
 Item('clothing', function(data, slot)
 	local metadata = slot.metadata
