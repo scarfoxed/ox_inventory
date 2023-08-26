@@ -1,11 +1,5 @@
 return {
 	Weapons = {
-		['WEAPON_TECPISTOL'] = {
-			label = 'Tactical SMG',
-			weight = 1500,
-			durability = 0.075,
-			ammoname = 'ammo-9',
-		},
 		['WEAPON_ADVANCEDRIFLE'] = {
 			label = 'Advanced Rifle',
 			weight = 3100,
@@ -700,6 +694,130 @@ return {
 			weight = 600,
 			throwable = true,
 		},
+		----------------------------- ADDON WEAPONS ---------------------------
+		['WEAPON_AK47'] = {
+			label = 'AK-47',
+			weight = 2000,
+			durability = 0.03,
+			ammoname = 'ammo-rifle2'
+		},
+		['WEAPON_M70'] = {
+			label = 'M70',
+			weight = 3000,
+			durability = 0.06,
+			ammoname = 'ammo-sniper'
+		},
+		['WEAPON_DE'] = {
+			label = 'Desert Eagle',
+			weight = 1200,
+			durability = 0.03,
+			ammoname = 'ammo-50'
+		},
+		['WEAPON_FNX45'] = {
+			label = 'FN FNX45',
+			weight = 800,
+			durability = 0.03,
+			ammoname = 'ammo-45'
+		},
+		['WEAPON_GLOCK17'] = {
+			label = 'PD Glock 17',
+			weight = 800,
+			durability = 0.03,
+			ammoname = 'ammo-9'
+		},
+		['WEAPON_M9'] = {
+			label = 'Beretta M9A3',
+			weight = 800,
+			durability = 0.03,
+			ammoname = 'ammo-9'
+		},
+		['WEAPON_M1911'] = {
+			label = 'M1911',
+			weight = 800,
+			durability = 0.03,
+			ammoname = 'ammo-9'
+		},
+		['WEAPON_M4'] = {
+			label = 'PD M4',
+			weight = 2200,
+			durability = 0.03,
+			ammoname = 'ammo-rifle'
+		},
+		['WEAPON_UZI'] = {
+			label = 'Uzi',
+			weight = 1500,
+			durability = 0.03,
+			ammoname = 'ammo-9'
+		},
+		['WEAPON_MAC10'] = {
+			label = 'Mac-10',
+			weight = 1500,
+			durability = 0.03,
+			ammoname = 'ammo-9'
+		},
+		['WEAPON_SHIV'] = {
+			label = 'Shiv',
+			weight = 500,
+			durability = 0.03,
+		},
+		['WEAPON_KATANA'] = {
+			label = 'Katana',
+			weight = 1200,
+			durability = 0.03,
+		},
+		['WEAPON_AR15'] = {
+			label = 'PD AR-15',
+			weight = 2200,
+			durability = 0.03,
+			ammoname = 'ammo-rifle'
+		},
+		['WEAPON_HK416'] = {
+			label = 'HK-416',
+			weight = 2400,
+			durability = 0.03,
+			ammoname = 'ammo-rifle'
+		},
+		['WEAPON_AK74'] = {
+			label = 'AK-74',
+			weight = 1600,
+			durability = 0.03,
+			ammoname = 'ammo-rifle2'
+		},
+		['WEAPON_AKS74'] = {
+			label = 'AKS-74',
+			weight = 1600,
+			durability = 0.03,
+			ammoname = 'ammo-45'
+		},
+		['WEAPON_GLOCK22'] = {
+			label = 'GLOCK 22',
+			weight = 1200,
+			durability = 0.03,
+			ammoname = 'ammo-9'
+		},
+		['WEAPON_REMINGTON'] = {
+			label = 'PD Remington 870',
+			weight = 1200,
+			durability = 0.03,
+			ammoname = 'ammo-shotgun'
+		},
+		['WEAPON_MP5'] = {
+			label = 'H&K MP5',
+			weight = 1800,
+			durability = 0.03,
+			ammoname = 'ammo-9'
+		},
+		['WEAPON_KARAMBIT'] = {
+			label = 'Karambit',
+			weight = 500,
+			durability = 0.03,
+		},
+		['WEAPON_COLBATON'] = {
+			label = 'PD Baton',
+			weight = 700,
+			durability = 0.03,
+		},
+		
 	},
 
 	Components = {
@@ -797,7 +915,6 @@ return {
 					`COMPONENT_SNSPISTOL_CLIP_02`,
 					`COMPONENT_SNSPISTOL_MK2_CLIP_02`,
 					`COMPONENT_VINTAGEPISTOL_CLIP_02`,
-                    `COMPONENT_TECPISTOL_CLIP_02`,
 				},
 				usetime = 2500
 			}
