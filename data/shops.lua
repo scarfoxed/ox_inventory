@@ -1,12 +1,27 @@
+---wip types
+
+---@class OxShop
+---@field name string
+---@field label? string
+---@field blip? { id: number, colour: number, scale: number }
+---@field inventory { name: string, price: number, count?: number, currency?: string }
+---@field locations? vector3[]
+---@field targets? { loc: vector3, length: number, width: number, heading: number, minZ: number, maxZ: number, distance: number, debug?: boolean, drawSprite?: boolean }[]
+---@field groups? string | string[] | table<string, number>
+---@field model? number[]
+
 return {
 	General = {
 		name = 'Shop',
 		blip = {
 			id = 59, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'burger', price = 10 },
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
+			{ name = 'burger', price = 5 },
+			{ name = 'tosti', price = 2 },
+			{ name = 'sandwich', price = 4 },
+			{ name = 'nachos', price = 2 },
+			{ name = 'water', price = 3 },
+			{ name = 'cola', price = 3 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(-3038.71, 585.9, 7.9),
@@ -37,9 +52,12 @@ return {
 		blip = {
 			id = 93, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
-			{ name = 'burger', price = 15 },
+			{ name = 'burger', price = 5 },
+			{ name = 'tosti', price = 2 },
+			{ name = 'sandwich', price = 4 },
+			{ name = 'nachos', price = 2 },
+			{ name = 'water', price = 3 },
+			{ name = 'cola', price = 3 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -63,7 +81,11 @@ return {
 		blip = {
 			id = 402, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'lockpick', price = 10 }
+			{ name = 'lockpick', price = 15 },
+			{ name = 'advancedlockpick', price = 40 },
+			{ name = 'repairkit', price = 50 },
+			{ name = 'phone', price = 40},
+			{ name = 'bandage', price = 10},
 		}, locations = {
 			vec3(2748.0, 3473.0, 55.67),
 			vec3(342.99, -1298.26, 32.51)
@@ -77,10 +99,11 @@ return {
 		blip = {
 			id = 110, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'WEAPON_KNIFE', price = 200 },
-			{ name = 'WEAPON_BAT', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 1000, metadata = { registered = true }, license = 'weapon' }
+			{ name = 'WEAPON_KNIFE', price = 200, },
+			{ name = 'ammo-45', price = 5, license = 'weapon'  },
+			{ name = 'ammo-9', price = 5, license = 'weapon'  },
+			{ name = 'weapon_glock22', price = 250, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'weapon_fnx45', price = 200, metadata = { registered = true }, license = 'weapon' }
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
@@ -107,16 +130,29 @@ return {
 	PoliceArmoury = {
 		name = 'Police Armoury',
 		groups = shared.police,
-		blip = {
-			id = 110, colour = 84, scale = 0.8
-		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'ammo-rifle', price = 5, },
-			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
-			{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
-			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
+		inventory = {
+			{ name = 'ammo-9', price = 1, },
+			{ name = 'ammobox_9mm', price = 10, },
+			{ name = 'ammo-rifle', price = 1, },
+			{ name = 'ammobox_556', price = 10, },
+			{ name = 'ammo-45', price = 1, },
+			{ name = 'ammobox_45', price = 10, },
+			{ name = 'ammo-shotgun', price = 1, },
+			{ name = 'ammobox_12g', price = 10, },
+			{ name = 'ammo-50', price = 1, },
+			{ name = 'ammobox_50', price = 10, },
+			{ name = 'radio', price = 1, },
+			{ name = 'ifaks', price = 5, },
+			{ name = 'armor', price = 5, },
+			{ name = 'WEAPON_FLASHLIGHT', price = 1 },
+			{ name = 'WEAPON_NIGHTSTICK', price = 1 },
+			{ name = 'handcuffs', price = 1 },
+			{ name = 'WEAPON_DE', price = 1, metadata = { registered = true, serial = 'POL' }, grade = 4 },
+			{ name = 'WEAPON_GLOCK17', price = 1, metadata = { registered = true, serial = 'POL' }},
+			{ name = 'WEAPON_M4', price = 1, metadata = { registered = true, serial = 'POL' }, grade = 4 },
+			{ name = 'WEAPON_MP5', price = 1, metadata = { registered = true, serial = 'POL' }, grade = 4 },
+			{ name = 'WEAPON_REMINGTON', price = 1, metadata = { registered = true, serial = 'POL' }, grade = 4 },
+			{ name = 'WEAPON_STUNGUN', price = 1, metadata = { registered = true, serial = 'POL'} }
 		}, locations = {
 			vec3(451.51, -979.44, 30.68)
 		}, targets = {
@@ -132,7 +168,7 @@ return {
 		blip = {
 			id = 403, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'medikit', price = 26 },
+			{ name = 'medikit', price = 25 },
 			{ name = 'bandage', price = 5 }
 		}, locations = {
 			vec3(306.3687, -601.5139, 43.28406)
@@ -150,7 +186,6 @@ return {
 			{ name = 'ammo-rifle', price = 1000, currency = 'black_money' },
 			{ name = 'ammo-rifle2', price = 1000, currency = 'black_money' }
 		}, locations = {
-			vec3(309.09, -913.75, 56.46)
 		}, targets = {
 
 		}
