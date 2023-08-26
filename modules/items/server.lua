@@ -473,5 +473,71 @@ end
 -- end)
 
 -----------------------------------------------------------------------------------------------
+Item('ammobox_22', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-22', 120)
+    end
+end)
+
+Item('ammobox_38', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-38', 120)
+    end
+end)
+
+Item('ammobox_44', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-44', 120)
+    end
+end)
+
+Item('ammobox_45', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-45', 120)
+    end
+end)
+
+Item('ammobox_9mm', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-9', 120)
+    end
+end)
+Item('ammobox_50', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-50', 120)
+    end
+end)
+
+Item('ammobox_556', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-rifle1', 120)
+    end
+end)
+
+Item('ammobox_762', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-rifle2', 120)
+    end
+end)
+
+Item('ammobox_12g', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-shotgun', 60)
+    end
+end)
+
+Item('ammobox_223', function(event, item, inventory, data, slot)
+    if event == 'usedItem' then
+        Inventory.AddItem(inventory, 'ammo-sniper', 30)
+    end
+end)
+Item('giftbox', function(event, item, inventory, data, slot)
+	if event == 'usedItem' then
+	Inventory.AddItem(inventory, 'water', 5)
+	Inventory.AddItem(inventory, 'burger', 5)
+	end
+end)
+
+return Items
 
 return Items
