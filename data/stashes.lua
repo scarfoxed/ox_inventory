@@ -36,4 +36,22 @@ return {
 		weight = 70000,
 		groups = {['ambulance'] = 0}
 	},
+	{
+		coords = vec3(-345.374969, -130.687088, 39.009613),
+		target = {
+			loc = vec3(-345.374969, -130.687088, 39.009613),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 37.0,
+			maxZ = 40.0,
+			label = 'Open Shop Stash'
+		},
+		name = 'lscustoms',
+		label = 'LS Customs Stash',
+		owner = true,
+		slots = 100,
+		weight = 500000,
+		groups = {['mechanic'] = 0}
+	},
 }
